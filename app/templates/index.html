@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %} Pokedex {% endblock %}
+{% block css %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='/styles/index.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<nav class="nav-bar">
+    <div class="left-brand">
+        <img class="logo" src="/static/pokedex-logo.svg" alt="pokedex logo"> Pokedex
+    </div>
+    <div class="my-brand">
+        <h1>Mauwt</h1>
+    </div>
+</nav>
+
+<main class="main">
+    <h1>Select an Option</h1>
+    <div class="animation">
+        <img src="../static/ash_walk.gif" alt="ash and pikachu gif">
+    </div>
+    <div class="outter-form">
+        
+      
+        <button  class="read" type="submit" method="GET">
+            <a href="{{url_for('pokemones.get_pokemon')}}" >Explore</a>
+        </button>
+        <button class="create">
+            <a href="{{url_for('pokemones.add_pokemon')}}" >Catch</a>
+        </button>
+        <button class="update">
+            <a href="#" >Evolve</a>
+        </button>
+        <button class="delete">
+            <a href="{{url_for('team.delete_pokemon')}}" >Free</a>
+        </button>
+
+    </div>
+
+</main>
+
+<div class="pokedex-button">
+    <button class="go2pokedex" >
+        <a href="{{url_for('team.get_team')}}">My team</a>
+    </button>
+</div>
+
+
+{% endblock %}

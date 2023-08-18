@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title%} Pokemon {% endblock %}
+
+{% block css %} 
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/get_pokemon.css') }}">
+{% endblock %}
+
+{% block content %}
+
+
+<main class="outter-card">
+    <div class = "main">
+        <img src="{{info['sprites']}}" alt="pokemon image">
+        <div class="dato"> 
+            <h2> Nombre</h2>
+            <p>{{info["pokemon"]["Nombre"] | capitalize }}</p>
+        </div>
+        <div class="dato"> 
+            <h2> Tipo</h2>
+            <p>{{info['pokemon']['Tipo']}}</p>
+        </div>
+        <div class="dato">
+            <h2> Poder</h2>
+            <p>{{info['pokemon']['poder']}}</p>
+        </div>
+    </div>
+
+</main>
+
+<div class="catch-options">
+    <div class="option">
+        <a href="{{url_for('team.add_pokemon', nombre=info['pokemon']['Nombre'], tipo = info['pokemon']['Tipo'], poder=info['pokemon']['poder'])}}" method="post">Catch</a>
+    </div>
+    <div class="option">
+        <a href="{{url_for('index')}}">Run</a>
+    </div>
+</div>
+{% endblock %}

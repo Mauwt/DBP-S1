@@ -1,0 +1,183 @@
+body{
+    background: #106d8a;
+    max-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+.nav-bar{
+    
+    max-width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin:50px auto;
+
+    border-radius: 10px;
+    border-bottom: 0.5px solid #e4c439;
+    border-top: 0.5px solid #e4c439;
+    border-right: 0.5px solid #e4c439;
+    border-left: 0.5px solid #e4c439;
+    
+}
+
+.left-brand>.logo{
+    max-width: 90px;
+    max-height: 90px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+.left-brand{
+    margin: auto auto auto 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.my-brand{
+    font-size: 14px;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto 12px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin:auto auto;
+    width: fit-content; 
+    border-top: 1px solid #e4c439;
+    border-bottom: 1px solid #e4c439;
+    border-radius: 10px;
+    box-shadow: 0 5px 8px rgba(39, 35, 35, 0.16), 0 5px 8px rgba(29, 27, 27, 0.23);
+    background: #5bb0ca;
+    border-color: #e4c439;
+    padding: 10px auto;
+
+}
+
+.main>h1{
+    font-weight: 800;
+    text-decoration: dotted;
+}
+
+.animation>img{
+    height: 15rem;
+}
+
+.outter-form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+
+.outter-form>button {
+    margin: 10px 15px;
+    padding: 0 0;
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #798d93 0, #8aabd4 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px
+}
+
+.outter-form>button:focus {
+  box-shadow: #6871bb 0 0 0 1.5px inset, rgba(85, 73, 110, 0.4) 0 2px 4pxrgba(90, 81, 110, 0.3)3  0 7px 13px -3pxrgb(105, 120, 229)e0 0 -3px 0 inset;
+}
+
+.outter-form>button:hover {
+  box-shadow: rgba(66, 60, 80, 0.4) 0 4px 8px, rgba(56, 49, 69, 0.3) 0 7px 13px -3px, #4b4e69 0 -3px 0 inset;
+  transform: translateY(-4px);
+}
+
+.outter-form>button:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.outter-form>button>a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.pokedex-button{
+    width: max-content;
+    align-items: center ;
+    margin: 50px auto;
+}
+
+.pokedex-button>button{
+    color: aliceblue;
+    font-size: 14px;
+    font-family: 'Press Start 2P';
+    margin: 10px auto;
+    width: fit-content;
+    max-width: 200px;
+    height: 50px;
+    padding: 10px 15px;
+    align-items: center;
+    appearance: none;
+    background-color: #e60d0d;
+    transition: box-shadow .15s,transform .15s;
+    will-change: box-shadow,transform;
+    /* background-image: radial-gradient(100% 100% at 100% 0, #e60d0d 0, #da76ad 100%); */
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+
+}
+  
+.pokedex-button>button:hover {
+    box-shadow: rgba(66, 60, 80, 0.4) 0 4px 8px, rgba(56, 49, 69, 0.3) 0 7px 13px -3px, #4b4e69 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+.pokedex-button>button:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+}
+.pokedex-button>button:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+  

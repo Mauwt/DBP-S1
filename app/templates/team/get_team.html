@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %} My team {% endblock %}
+
+{% block css %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='/styles/get_team.css') }}">
+{% endblock %}
+
+{% block content %}
+
+{% if team|length == 0 %}
+
+<main class="main">
+    <div class="outter-section">
+        <div class="message">
+            <p>Currently you dont have any Pokemon </p>
+            <a href="{{url_for('index')}}">Explore</a>and catch some!
+        </div>
+    </div>
+</main>
+    
+{% else %}
+<div class="main">
+    <div class="outter-section">
+        {% for pokemon in team %}
+        <div class="pokemon-section">
+            <div class="pokemon-image">
+                <img src="{{pokemon['imagen']}}" alt="pokemon image">
+            </div>
+            <div class="pokemon-info">
+                <div class="pokemon-name">
+                    <h1>{{pokemon['Nombre'] | capitalize }}</h1>
+                </div>
+                <div class="pokemon-type">
+                    <h2>{{pokemon['Tipo']}}</h2>
+                </div>
+                <div class="pokemon-power">
+                    <h2>{{pokemon['poder']}}</h2>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="options">
+        <div class="option">
+            <a href="{{url_for('index')}}">Home</a>
+        </div>
+        <div class="option">
+            <a href="{{url_for('pokemones.get_pokemon')}}">Explore</a>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

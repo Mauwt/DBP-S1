@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Agregar Pokemon{% endblock %}
+
+{% block content %}
+
+{% if add==False %}
+    <h1>Agregar Pokemon</h1>
+    <form action="{{url_for('pokemones.add_pokemon')}}" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" required>
+
+        <label for="tipo">Tipo</label>
+        <input type="text" name="tipo" id="tipo" required>
+
+        <label for="poder">Poder</label>
+        <input type="text" name="poder" id="poder" required>
+        
+        <!-- <label for="imagen">Imagen</label>
+        <input type="text" name="imagen" id="imagen" required> -->
+        
+        <input type="submit" value="Agregar">
+    </form>
+{% else %}
+
+    <h1>Pokemon agregado</h1>
+    <a href="{{url_for('pokemones.add_pokemon')}}">Volver</a>
+{% endif %}
+
+{% endblock %}
+```
+

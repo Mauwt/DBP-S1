@@ -1,0 +1,120 @@
+body{
+    background: #106d8a;
+    box-sizing: border-box;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    width: fit-content;
+}
+.outter-section{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #e4c439;
+    border-bottom: 1px solid #e4c439;
+    border-radius: 10px;
+    box-shadow: 0 5px 8px rgba(39, 35, 35, 0.16), 0 5px 8px rgba(29, 27, 27, 0.23);
+    background: #5bb0ca;
+    border-color: #e4c439;
+}
+
+.message{
+    margin: 10px 5px;
+    font-family: 'Press Start 2P';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.message>p{
+    font-size: 14px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    color: #e4c439;
+}
+
+.message>a{
+    font-size: 20px;
+    margin: 30px auto;
+    margin-bottom: 15px;
+    color: #fff;
+    -webkit-text-stroke: 0.5px black;
+    text-decoration: none;
+}
+
+.pokemon-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+.pokemon-image{
+    
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+.pokemon-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4px auto;
+}
+
+.pokemon-info>div{
+    margin: 0 10px;
+    font-size: 10px;
+    font-family: 'Press Start 2P';
+    -webkit-text-stroke: 0.5px black;
+    color: #e4c439;
+}
+
+.options{
+    width: fit-content;
+    margin: 50px auto;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.options>.option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #e4c439;
+    
+    border-radius: 10px;
+    border: 1px solid #e4c439;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    
+    padding: 15px 15px;
+    margin: 5px 5px;
+
+    cursor: pointer;
+}
+
+
+.options>.option>a{
+    font-family: 'Press Start 2P';
+    font-size: 22px;
+    color: rgb(32, 27, 27);
+    text-decoration: none;
+}
